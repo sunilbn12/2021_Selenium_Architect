@@ -72,6 +72,7 @@ public class TestBase {
     public void startBrowser(String browserNameXML) throws Exception {
 
         log.info("Log4j files");
+        System.out.println("Launching different browsers");
 
         logger = extent.createTest("Test started");
         logger.log(Status.PASS, MarkupHelper.createLabel("Test Case Passed is passTest", ExtentColor.GREEN));
