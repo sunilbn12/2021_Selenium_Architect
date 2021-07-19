@@ -36,7 +36,7 @@ public class TestBase {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\Sunil\\Downloads\\chromedriver_win32\\chromedriver.exe");
         System.setProperty("webdriver.edge.driver", "C:\\Users\\Sunil\\Downloads\\edgedriver_win64\\msedgedriver.exe");
 
-        htmlReporter = new ExtentHtmlReporter("E:\\JAVA_Selenium\\NewSelenium\\target\\surefire-reports\\" + fileName);
+        htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"\\target\\surefire-reports\\" + fileName);
 //        reports.get().createTest("Starting");
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
