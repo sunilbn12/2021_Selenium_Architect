@@ -17,6 +17,8 @@ public class Test2 extends TestBase {
         driver.get().manage().window().fullscreen();
         driver.get().manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
+
+
         Actions actions = new Actions(driver.get());
         WebElement men = driver.get().findElement(By.xpath("(//span[contains(text(),'Pots')])[1]"));
         actions.moveToElement(men).click();

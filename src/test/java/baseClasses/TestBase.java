@@ -6,6 +6,7 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.selenium.utlities.ExcelReader;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -24,6 +25,8 @@ public class TestBase {
     static Date d = new Date();
     static String fileName = "Execution_" + d.toString().replace(":", "_").replace(" ", "_") + ".html";
     public static Logger log = LogManager.getLogger("devpinoyLogger");
+
+    public ExcelReader execlReader = new ExcelReader(".//src//resources//TestData.xlsx");
 
     //public WebDriver driver;
     protected static ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();
